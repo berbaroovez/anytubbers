@@ -6,6 +6,7 @@ const Layout: React.FC = ({ children }) => {
 };
 
 const LayoutContainer = styled.div`
+  font-family: "Roboto";
   margin: 0 auto;
   max-width: 700px;
 `;

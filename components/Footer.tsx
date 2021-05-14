@@ -14,6 +14,7 @@ export default function Footer() {
 }
 
 const FooterContainer = styled.div`
+  font-family: "Roboto";
   width: 100%;
   background: hsla(0, 0%, 95%, 1);
   display: grid;

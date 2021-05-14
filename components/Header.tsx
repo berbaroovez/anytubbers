@@ -35,13 +35,13 @@ const HeaderTitle = styled.h1`
   font-size: 3rem;
   font-weight: 800;
   color: white;
-
+  text-transform: uppercase;
   @media (min-width: 700px) {
     font-size: 5rem;
   }
 `;
 const HeaderSubTitle = styled.h3`
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 800;
   color: white;
   margin-bottom: 20px;
@@ -60,14 +60,14 @@ const HeaderCard = styled.div`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   @media (min-width: 700px) {
     width: 400px;
 
     h4 {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
   }
 `;
