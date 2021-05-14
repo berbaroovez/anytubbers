@@ -3,7 +3,7 @@ import TournamentCard from "./TournamentCard";
 export default function Tournaments() {
   return (
     <TournamentsContainer>
-      <TournamentTitle>Past Tournys</TournamentTitle>
+      <TournamentTitle>Past Tourneys</TournamentTitle>
       <TournamentGrid>
         <TournamentCard game="Valorant" title="Any Tubbers 1" />
         <TournamentCard game="Valorant" title="Any Tubbers 2" />
