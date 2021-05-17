@@ -13,7 +13,7 @@ const SEO = {
     description,
     images: [
       {
-        url: "https://www.anytubbers.com/og.png",
+        url: "https://www.anytubbers.com/static/test.png",
         alt: title,
         width: 1280,
         height: 720,

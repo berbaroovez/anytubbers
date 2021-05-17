@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { NextSeo } from "next-seo";
 
 import Header from "./../components/Header";
 import About from "./../components/About";
@@ -13,7 +12,6 @@ const Title = styled.h1`
 export default function Home() {
   return (
     <>
-      <NextSeo description="A tournament series for Stanz the streamer." />
       <Header />
       <Layout>
         <About />
