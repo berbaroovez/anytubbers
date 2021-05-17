@@ -1,4 +1,4 @@
-const title = "Any Tubers";
+const title = "Any Tubbers";
 const description = "A tournament series for the community of Stanz";
 
 const SEO = {
