@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
           site_name: "Any Tubbers",
           images: [
             {
-              url: "https://anytubbers.com/og.png",
+              url: "https://www.anytubbers.com/og.png",
               alt: "Any Tubbers",
               width: 1280,
               height: 720,
