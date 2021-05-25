@@ -4,7 +4,7 @@ import useSWR from "swr";
 import fetcher from "../util/fetcher";
 export default function Tournaments() {
   const { data } = useSWR(["/api/notion"], fetcher);
-  console.log(data);
+
   return (
     <TournamentsContainer>
       <TournamentTitle>Past Tourneys</TournamentTitle>
@@ -13,6 +13,7 @@ export default function Tournaments() {
           ? data.map((post: any, index: number) => {
               return (
                 <TournamentCard
+                  key={post.properties.name.title[0].text.content}
                   game={post.properties.game.select.name}
                   title={post.properties.name.title[0].text.content}
                   info={{
