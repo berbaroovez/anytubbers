@@ -29,7 +29,6 @@ const TeamCreator = () => {
 
     // updatedPlayers
     if (e.target.className === "discord") {
-      console.log(e.target.value);
       updatedPlayers[index]["discord"] = e.target.value;
     } else if (e.target.className === "league") {
       updatedPlayers[index]["league"] = e.target.value;

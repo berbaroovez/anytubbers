@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const TeamList = () => {
   const { data } = useSWR("/api/teams", fetcher);
-
+  console.log("Data", data);
   return (
     <div>
       {data
@@ -27,7 +27,7 @@ const TeamList = () => {
                       <tr key={player.discord}>
                         <td>{player.discord}</td>
                         <td>{player.league}</td>
-                        <td>{player.captain ? "X" : null}</td>
+                        <td>{player.captain ? "C" : null}</td>
                       </tr>
                     );
                   })}
