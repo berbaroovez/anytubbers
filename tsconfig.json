@@ -19,7 +19,7 @@
     "**/*.ts",
     "**/*.tsx",
     "util/firebase.js",
-    "util/db.js"
+    "util/db.ts"
   ],
   "exclude": ["node_modules"]
 }

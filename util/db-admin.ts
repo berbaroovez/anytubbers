@@ -3,23 +3,14 @@ import { db } from "./firebase-admin";
 export async function getTeams() {
   try {
     const snapshot = await db.collection("teams").get();
-    snapshot.forEach((snap) => {
-      console.log(snap.data());
+
+    const orders: any[] = [];
+    snapshot.forEach((doc) => {
+      orders.push({ id: doc.id, ...doc.data() });
     });
-    return snapshot;
+
+    return orders;
   } catch (err) {
     return err;
-  }
-}
-
-export async function addTeam() {
-  try {
-    db.collection("teams").add({
-      captain: false,
-      discord: "Test#0001",
-      league: "TESTNA1",
-    });
-  } catch (err) {
-    console.log(err);
   }
 }

@@ -5,13 +5,8 @@ import About from "./../components/About";
 import Tournaments from "./../components/Tournaments";
 import Layout from "./../components/Layout";
 import Footer from "./../components/Footer";
-import { createTeam, submitOrder } from "./../util/db";
 
-const test = async () => {
-  console.log("TEST");
-  var yolo = await createTeam({ datatest: "data" });
-  console.log("TEST", yolo);
-};
+import TeamCreator from "./../components/TeamCreator";
 
 export default function Home() {
   return (
@@ -21,7 +16,8 @@ export default function Home() {
         <About />
         <Tournaments />
       </Layout>
-      <button onClick={test}>Hello</button>
+
+      <TeamCreator />
       <Footer />
     </>
   );
