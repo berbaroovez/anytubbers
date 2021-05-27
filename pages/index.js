@@ -17,7 +17,6 @@ export default function Home() {
         <Tournaments />
       </Layout>
 
-      <TeamCreator />
       <Footer />
     </>
   );
