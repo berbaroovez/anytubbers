@@ -1,5 +1,6 @@
 export interface Player {
   captain: boolean;
   discord: string;
-  league: string;
+  riot: string;
+  team?: string;
 }

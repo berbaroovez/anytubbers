@@ -26,7 +26,7 @@ const TeamList = () => {
                     return (
                       <tr key={player.discord}>
                         <td>{player.discord}</td>
-                        <td>{player.league}</td>
+                        <td>{player.riot}</td>
                         <td>{player.captain ? "C" : null}</td>
                       </tr>
                     );

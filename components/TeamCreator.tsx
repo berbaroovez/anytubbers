@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
 const TeamCreator = () => {
-  const blankPlayer: Player = { captain: false, league: "", discord: "" };
+  const blankPlayer: Player = { captain: false, riot: "", discord: "" };
 
   const [teamName, setTeamName] = useState("");
   const [playerState, setPlayerState] = useState<Player[]>([
@@ -30,8 +30,8 @@ const TeamCreator = () => {
     // updatedPlayers
     if (e.target.className === "discord") {
       updatedPlayers[index]["discord"] = e.target.value;
-    } else if (e.target.className === "league") {
-      updatedPlayers[index]["league"] = e.target.value;
+    } else if (e.target.className === "riot") {
+      updatedPlayers[index]["riot"] = e.target.value;
     } else {
       updatedPlayers[index]["captain"] = e.target.checked;
     }
@@ -40,6 +40,7 @@ const TeamCreator = () => {
 
   const submitForm = (e: React.FormEvent) => {
     e.preventDefault();
+
     createTeam({
       name: teamName,
       players: [...playerState],
@@ -83,7 +84,7 @@ const TeamCreator = () => {
           {playerState.map((val, idx) => {
             const captainId = `captain-${idx}`;
             const discordId = `discord-${idx}`;
-            const leagueId = `league-${idx}`;
+            const riotId = `riot-${idx}`;
             return (
               <div key={`player-${idx}`}>
                 <label htmlFor={discordId}>{`Discord`}</label>
@@ -97,15 +98,15 @@ const TeamCreator = () => {
                   value={playerState[idx].discord}
                   required
                 />
-                <label htmlFor={leagueId}>{`League`}</label>
+                <label htmlFor={riotId}>{`Riot Id`}</label>
                 <input
                   type="text"
-                  name={leagueId}
+                  name={riotId}
                   data-idx={idx}
-                  id={leagueId}
-                  className="league"
+                  id={riotId}
+                  className="riot"
                   onChange={handlePlayerChange}
-                  value={playerState[idx].league}
+                  value={playerState[idx].riot}
                   required
                 />
                 <label htmlFor={captainId}>{`Captain`}</label>
