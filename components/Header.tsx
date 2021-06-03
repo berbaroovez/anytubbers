@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import DiscordLogo from "./DiscordLogo";
+import Lines from "./Lines";
 export default function Header() {
   return (
     <HeaderContainer>

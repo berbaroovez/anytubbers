@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Lines from "./Lines";
 
 export default function About() {
   return (
@@ -14,6 +15,7 @@ export default function About() {
 }
 
 const AboutContainer = styled.div`
+  position: relative;
   padding-top: 150px;
   text-align: center;
 `;

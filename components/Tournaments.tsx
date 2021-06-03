@@ -2,6 +2,7 @@ import styled from "styled-components";
 import TournamentCard from "./TournamentCard";
 import useSWR from "swr";
 import fetcher from "../util/fetcher";
+
 export default function Tournaments() {
   const { data } = useSWR(["/api/notion"], fetcher);
 
@@ -32,30 +33,13 @@ export default function Tournaments() {
               );
             })
           : null}
-
-        {/* <TournamentCard
-          game="Valorant"
-          title="Any Tubbers 1"
-          info={{
-            date: "02/20/94",
-            firstPlace: "Quack",
-            secondPlace: "Berb",
-            stats: "https://twitter.com/berbaroovez",
-          }}
-        />
-        <TournamentCard game="Valorant" title="Any Tubbers 2" />
-        <TournamentCard game="Melee" title="Any Tubbers Melee" />
-        <TournamentCard game="Valorant" title="Any Tubbers 3" />
-        <TournamentCard game="Valorant" title="Any Tubbers 4" />
-        <TournamentCard game="Valorant" title="Any Tubbers 5" />
-        <TournamentCard game="Valorant" title="Any Tubbers 6" />
-        <TournamentCard game="LoL" title="Any Tubbers LoL" /> */}
       </TournamentGrid>
     </TournamentsContainer>
   );
 }
 
 const TournamentsContainer = styled.div`
+  width: 100%;
   display: grid;
   justify-items: center;
   padding-bottom: 100px;

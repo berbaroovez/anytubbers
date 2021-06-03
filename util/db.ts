@@ -31,15 +31,6 @@ export async function createPlayersWithTeam(data: Team) {
       teamId: data.teamId,
     });
   }
-  // await firestore
-  //   .collection("players")
-  //   .add(data)
-  //   .then((docRef) => {
-  //     console.log("Added", docRef.id);
-  //   })
-  //   .catch((error) => {
-  //     console.error("Error adding document: ", error);
-  //   });
 
   console.log("Made it");
 }
