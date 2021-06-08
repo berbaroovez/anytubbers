@@ -19,7 +19,8 @@
     "**/*.ts",
     "**/*.tsx",
     "util/firebase.js",
-    "util/db.ts"
+    "util/db.ts",
+    "pages/p/[teamid].jsx"
   ],
   "exclude": ["node_modules"]
 }

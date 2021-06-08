@@ -1,4 +1,5 @@
 import { db } from "./firebase-admin";
+import { Team } from "./GlobalInterfaces";
 
 export async function getTeams() {
   try {
@@ -23,6 +24,7 @@ export async function getTeam(id: string) {
         id: snapshot.id,
         ...snapshot.data(),
       };
+      return team;
     } else {
       return undefined;
     }
