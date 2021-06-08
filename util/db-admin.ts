@@ -18,13 +18,16 @@ export async function getTeams() {
 export async function getTeam(id: string) {
   try {
     const snapshot = await db.collection("teams").doc(id).get();
-    const team = {
-      id: snapshot.id,
-      ...snapshot.data(),
-    };
-
-    return team;
+    if (snapshot.exists) {
+      const team = {
+        id: snapshot.id,
+        ...snapshot.data(),
+      };
+    } else {
+      return undefined;
+    }
   } catch (err) {
+    console.log("WRONG TEAM");
     return err;
   }
 }
