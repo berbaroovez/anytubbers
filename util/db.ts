@@ -9,7 +9,7 @@ export async function createTeam(data: Team) {
     .add(data)
     .then((docRef) => {
       console.log("Added", docRef.id);
-      const playerData = { ...data, teamId: docRef.id };
+      const playerData = { ...data, id: docRef.id };
       createPlayersWithTeam(playerData);
     })
     .catch((error) => {

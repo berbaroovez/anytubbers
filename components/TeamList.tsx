@@ -6,7 +6,7 @@ const TeamList = () => {
   const { data } = useSWR("/api/teams", fetcher);
   console.log("Data", data);
   return (
-    <div>
+    <TeamsContainer>
       {data
         ? data.map((team: any) => {
             return (
@@ -36,9 +36,17 @@ const TeamList = () => {
             );
           })
         : "loading"}
-    </div>
+    </TeamsContainer>
   );
 };
+
+const TeamsContainer = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: start;
+  grid-gap: 20px;
+`;
 
 const TeamContainer = styled.table`
   min-width: 300px;
