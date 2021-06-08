@@ -4,7 +4,7 @@ const AddTeams = () => {
   return (
     <>
       <TeamCreator />
-      <TeamList />
+      {/* <TeamList /> */}
     </>
   );
 };

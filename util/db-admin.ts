@@ -14,3 +14,17 @@ export async function getTeams() {
     return err;
   }
 }
+
+export async function getTeam(id: string) {
+  try {
+    const snapshot = await db.collection("teams").doc(id).get();
+    const team = {
+      id: snapshot.id,
+      ...snapshot.data(),
+    };
+
+    return team;
+  } catch (err) {
+    return err;
+  }
+}

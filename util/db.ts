@@ -1,13 +1,8 @@
 import firebase from "./firebase";
-import { Player } from "./GlobalInterfaces";
+import { Player, Team } from "./GlobalInterfaces";
 const app = firebase.app();
 const firestore = firebase.firestore();
 
-interface Team {
-  name: string;
-  players: Player[];
-  teamId?: string;
-}
 export async function createTeam(data: Team) {
   await firestore
     .collection("teams")
@@ -28,11 +23,23 @@ export async function createPlayersWithTeam(data: Team) {
     await firestore.collection("players").add({
       ...data.players[i],
       teamName: data.name,
-      teamId: data.teamId,
+      teamId: data.id,
     });
   }
 
   console.log("Made it");
+}
+export function updateTeam(data: Team) {
+  return firestore.collection("teams").doc(data.id).update(data);
+}
+
+export async function deleteTeam(id: string) {
+  try {
+    console.log("delete", id);
+    await firestore.collection("teams").doc(id).delete();
+  } catch (err) {
+    return err;
+  }
 }
 
 // export function submitOrder(data) {

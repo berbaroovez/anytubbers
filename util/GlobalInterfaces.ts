@@ -4,3 +4,9 @@ export interface Player {
   riot: string;
   team?: string;
 }
+
+export interface Team {
+  id?: string;
+  name: string;
+  players: Player[];
+}
