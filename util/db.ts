@@ -3,7 +3,7 @@ import { Player, Team } from "./GlobalInterfaces";
 const app = firebase.app();
 const firestore = firebase.firestore();
 
-export function createUser(uid: string, data) {
+export function createUser(uid: string, data: any) {
   return firestore
     .collection("users")
     .doc(uid)
