@@ -3,6 +3,13 @@ import { Player, Team } from "./GlobalInterfaces";
 const app = firebase.app();
 const firestore = firebase.firestore();
 
+export function createUser(uid: string, data) {
+  return firestore
+    .collection("users")
+    .doc(uid)
+    .set({ uid, ...data }, { merge: true }); // we add the user id and all the data to their profile
+}
+
 export async function createTeam(data: Team) {
   await firestore
     .collection("teams")
